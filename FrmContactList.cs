@@ -32,9 +32,7 @@ public partial class FrmContactList : Form
     }
 
     private void DgvContactsCellContentClick(object? sender, DataGridViewCellEventArgs e)
-    {
-        DataGridView senderDgv = (DataGridView)sender;
-
+    { 
         if (e.ColumnIndex == 2) //details
         {
             _ = new FrmDetails(function: "details", $"{dgvContacts[0, e.RowIndex].Value}").ShowDialog();
